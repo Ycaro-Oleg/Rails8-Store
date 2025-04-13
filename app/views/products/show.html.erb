@@ -1,6 +1,8 @@
 <h1>Produto unico : </h1>
 <% cache @product do %>
+  <%= image_tag @product.featured_image if @product.featured_image.attached? %>
   <p><%= @product.name %></p>
+  <%= @product.description %>
 <% end %>
 
 
